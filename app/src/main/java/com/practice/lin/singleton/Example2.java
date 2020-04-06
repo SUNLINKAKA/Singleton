@@ -7,7 +7,7 @@ public class Example2 {
     //懒汉模式
     private static Example2 mInstance;
 
-    public static synchronized Example2 getInstance(){
+    synchronized public  static  Example2 getInstance(){
         if (null==mInstance){
             mInstance = new Example2();
         }

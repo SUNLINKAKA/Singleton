@@ -5,7 +5,7 @@ import java.io.ObjectStreamException;
 public class Example3 {
 
     //DCL 双重检查
-    private static Example3 mInstance;
+    private volatile static Example3 mInstance;
 
     public static Example3 getInstance() {
         if (null == mInstance) {//避免懒汉模式下出现的不必要同步（synchronized）

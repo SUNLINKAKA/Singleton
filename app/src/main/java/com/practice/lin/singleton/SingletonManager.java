@@ -1,7 +1,10 @@
 package com.practice.lin.singleton;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 简单的单例的容器
@@ -17,6 +20,8 @@ public class SingletonManager {
     }
 
     public static Object getService(String key) {
+
+
         return objectMap.get(key);
     }
 }

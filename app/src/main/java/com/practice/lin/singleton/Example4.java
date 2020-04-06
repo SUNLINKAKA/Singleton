@@ -1,5 +1,7 @@
 package com.practice.lin.singleton;
 
+import android.content.Intent;
+
 import java.io.ObjectStreamException;
 
 public class Example4 {
@@ -12,13 +14,18 @@ public class Example4 {
         return SingletonHolder.mInstance;
     }
 
-    private  static class  SingletonHolder{
+    private static class SingletonHolder {
         private static final Example4 mInstance = new Example4();
     }
 
-
-    //防止反序列化的时候被新创建实例
-    private Object readResolve() throws ObjectStreamException{
+    /**
+     * 防止反序列化的时候被新创建实例
+     *
+     * @return
+     * @throws ObjectStreamException
+     */
+    private Object readResolve() throws ObjectStreamException {
         return SingletonHolder.mInstance;
     }
+
 }

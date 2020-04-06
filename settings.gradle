@@ -1,1 +1,7 @@
-include ':app'
+def type = 2
+if (type==2){
+    include ':app'
+}else {
+    include ':app'
+}
+
